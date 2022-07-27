@@ -2,7 +2,6 @@
 
 namespace App\Application\UseCase;
 
-
 use App\Application\Exception\NotFoundException;
 use App\Domain\Contract\BrandRepositoryInterface;
 use App\Domain\Contract\InfluencerRepositoryInterface;
