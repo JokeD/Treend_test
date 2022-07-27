@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Domain;
 
 
@@ -10,7 +9,6 @@ use App\Domain\Exception\InvalidPartnershipStatusChangeTypeException;
 
 class Partnership
 {
-
     const STATUS_NEW = 'NEW';
     const STATUS_REJECTED = 'REJECTED';
     const STATUS_ACCEPTED = 'ACCEPTED';
