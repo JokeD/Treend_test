@@ -41,7 +41,7 @@ Also a sql dump is provided at root project level
 
 ## REST - Usage
 
-A Postman Collection is included at project root level : Smartpoint-Test.postman_collection.json 
+A Postman Collection is included at project root level
 
 
 
