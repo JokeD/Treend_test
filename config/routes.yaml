@@ -1,0 +1,36 @@
+add_brand:
+    path: /brand/add
+    controller: App\Ui\Http\BrandController::add
+    methods: POST
+list_brands:
+    path: /brand/list
+    controller: App\Ui\Http\BrandController::list
+    methods: GET
+add_product:
+    path: /product/add
+    controller: App\Ui\Http\ProductController::add
+    methods: POST
+list_product:
+    path: /product/list
+    controller: App\Ui\Http\ProductController::list
+    methods: GET
+add_influencer:
+    path: /influencer/add
+    controller: App\Ui\Http\InfluencerController::add
+    methods: POST
+list_influencer:
+    path: /influencer/list
+    controller: App\Ui\Http\InfluencerController::list
+    methods: GET
+add_partnership:
+    path: /partnership/add
+    controller: App\Ui\Http\PartnershipController::add
+    methods: POST
+list_partnership:
+    path: /partnership/list
+    controller: App\Ui\Http\PartnershipController::list
+    methods: GET
+update_partnership_status:
+    path: /partnership/update/status
+    controller: App\Ui\Http\PartnershipController::statusUpdate
+    methods: POST

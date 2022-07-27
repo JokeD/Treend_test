@@ -1,0 +1,299 @@
+{
+	"info": {
+		"_postman_id": "2006e827-9105-4bc5-b160-0697b61747b1",
+		"name": "Treend-Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9393455"
+	},
+	"item": [
+		{
+			"name": "Add Brand",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Seats",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8001/brand/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"brand",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lists Brands",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8001/brand/list",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"brand",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Caltea 4 P ",
+							"type": "text"
+						},
+						{
+							"key": "brand_id",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8001/product/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"product",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8001/product/list",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"product",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Influencer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Pepe Dominguez",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8001/influencer/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"influencer",
+						"add"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Pepe",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Influencers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8001/influencer/list",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"influencer",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Partnership",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "product_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "brand_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "influencer_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "comment",
+							"value": "Hi dears do we can have an awesome colaboration",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8001/partnership/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"partnership",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Partnerships",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8001/partnership/list",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"partnership",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Partnership Status",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1\n",
+							"type": "text"
+						},
+						{
+							"key": "new_status",
+							"value": "accepted",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8001/partnership/update/status",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"partnership",
+						"update",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Shipping Status",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "new_status",
+							"value": "shipped",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8001/partnership/update/status",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"partnership",
+						"update",
+						"status"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

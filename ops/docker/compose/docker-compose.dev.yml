@@ -1,0 +1,35 @@
+version: '3.9'
+
+services:
+  treend_php_cli:
+    container_name: treend.php
+    build:
+      context: ../images/php-cli
+    image: treend
+    working_dir: /usr/share/treend_test
+    volumes:
+      - ../../../:/usr/share/treend_test
+    ports:
+      - 8001:8001
+    command: symfony server:start --port=8001
+    networks:
+      - treend_net 
+  mysql_treend:
+    container_name: treend.mysql
+    image: 'mariadb:10.3.27'
+    ports:
+      - "3306:3306"
+    networks:
+      - treend_net
+    volumes:
+      - ../../data/db:/var/lib/mysql
+      - ../config/mysql/initdb.d:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: partnerships
+      MYSQL_USER: treend
+      MYSQL_PASSWORD: secret_treend
+      MYSQL_HOST: 127.0.0.1
+      
+networks:
+  treend_net:
