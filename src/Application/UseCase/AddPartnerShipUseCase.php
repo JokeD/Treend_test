@@ -15,6 +15,7 @@ use App\Infrastructure\Persistence\Doctrine\Repositories\BrandRepository;
 use App\Request\AddPartnershipRequest;
 use App\Response\AddPartnershipResponse;
 
+
 class AddPartnerShipUseCase
 {
     private PartnerShipRepositoryInterface $partnershipRepository;
