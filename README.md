@@ -2,7 +2,7 @@
 
 Test was made with symfony fmk and DDD aproach.
 Requirements: Docker , Docker Compose
-The persitence infrastructure is sqlite
+The persitence infrastructure is mysql
 All the infra (Docker image etc..) is inside the ops folder.
 
 ## Installation
